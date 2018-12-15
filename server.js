@@ -26,7 +26,9 @@ const httpsEnabled =
 app.use(async ctx => {
 	try {
 		if (!ctx.host || ctx.get('X-Reverse-Proxied')) {
-			throw new Error('Host header not set.');
+			ctx.body = 'Host header not set.';
+			ctx.status = 400;
+			return;
 		}
 
 		const res = await fetch(
@@ -59,7 +61,7 @@ app.use(async ctx => {
 	}
 	catch (err) {
 		ctx.body = err.toString();
-		ctx.status = 400;
+		ctx.status = 500;
 	}
 	finally {
 		ctx.set('Access-Control-Allow-Methods', '*');
