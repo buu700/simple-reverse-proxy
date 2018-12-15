@@ -1,0 +1,25 @@
+{
+	"name": "simple-reverse-proxy",
+	"version": "0.0.1",
+	"description": "A reverse proxy",
+	"main": "server.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/buu700/simple-reverse-proxy.js.git"
+	},
+	"keywords": [
+		"proxy"
+	],
+	"author": "Ryan Lester <hacker@linux.com> (https://github.com/buu700)",
+	"license": "BSD-2-Clause",
+	"bugs": {
+		"url": "https://github.com/buu700/simple-reverse-proxy/issues"
+	},
+	"engines": {
+		"node": ">=8.0.0"
+	},
+	"dependencies": {
+		"koa": "^2.6.2",
+		"node-fetch": "^2.3.0"
+	}
+}
