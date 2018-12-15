@@ -8,7 +8,7 @@ This is a reverse proxy.
 
 	# Optional TLS setup
 	openssl req -x509 -newkey rsa:2048 -sha256 -days 365 -nodes -keyout key.pem -out cert.pem -subj '/CN=localhost'
-	openssl dhparam -out dhparams.pem 2048
+	openssl dhparam -out dhparam.pem 2048
 
 	npm install
 	npm start

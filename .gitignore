@@ -1,1 +1,4 @@
+cert.pem
+dhparam.pem
+key.pem
 node_modules
